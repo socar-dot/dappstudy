@@ -8,7 +8,8 @@ src/geth.log
 
 # LINK
 
-로컬 ${workspace}/src 와 도커 컨테이너 /src 볼륨맵핑
+${workspace}/src --> /src
+${workspace}/.ethereum --> /.ethereum
 
 # PORT
 30303 30303/udp
