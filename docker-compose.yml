@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  geth:
+    image: dappstudy:1.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "30303:30303"
+    volumes:
+      - ./src/:/src/
+      - ./.ethereum/:/.ethereum/
+    container_name: dappstudy
+    networks: 
+      - bridge
+    tty: true
+networks:
+  bridge:
+    driver: bridge
